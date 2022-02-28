@@ -3,13 +3,12 @@ name: docker-build-latest
 env:
   dockerhub_repository: "darkpixel/kutt"
   dockerhub_tag: "develop"
+  IMAGE_NAME: kutt
 
 on:
   push:
     branches:
       - develop
-env:
-  IMAGE_NAME: kutt
 jobs:
   dockerhub-build-push:
     runs-on: ubuntu-latest
